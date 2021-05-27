@@ -22,14 +22,12 @@ public class TikTak implements ActionListener {
         frame.setLayout(new BorderLayout());
         frame.setVisible(true);
 
-
         textField.setBackground(new Color(25, 25, 25));
         textField.setForeground(new Color(25, 255, 0));
-        textField.setFont(new Font("Ink Free", Font.BOLD, 75));
+        textField.setFont(new Font("Comic sans", Font.BOLD, 75));
         textField.setHorizontalAlignment(JLabel.CENTER);
         textField.setText("TicTacToe");
         textField.setOpaque(true);
-
 
         title_panel.setLayout(new BorderLayout());
         title_panel.setBounds(0, 0, 800, 100);
@@ -40,15 +38,13 @@ public class TikTak implements ActionListener {
         for (int i = 0; i < 9; i++) {
             buttons[i] = new JButton();
             button_panel.add(buttons[i]);
-            buttons[i].setFont(new Font("MV Boli", Font.BOLD, 120));
+            buttons[i].setFont(new Font("Comic sans", Font.BOLD, 120));
             buttons[i].setFocusable(false);
             buttons[i].addActionListener(this);
         }
-
         title_panel.add(textField);
         frame.add(title_panel, BorderLayout.NORTH);
         frame.add(button_panel);
-
         firstTurn();
     }
 
@@ -203,9 +199,9 @@ public class TikTak implements ActionListener {
                         (buttons[6].getText().equals("O"))) {
 
             oWins(2, 4, 6);
-
         }
     }
+
     public void xWins(int a, int b, int c) {
 
         buttons[a].setBackground(Color.GREEN);
